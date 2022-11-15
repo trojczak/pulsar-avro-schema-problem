@@ -1,0 +1,5 @@
+{
+  "type": "AVRO",
+  "properties": {},
+  "schema": "{\n  \"type\": \"record\",\n  \"name\": \"Person\",\n  \"namespace\": \"pl.trojczak.pocs.model\",\n  \"fields\": [\n    {\n      \"name\": \"name\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"birthYear\",\n      \"type\": \"int\"\n    }\n  ]\n}"
+}
