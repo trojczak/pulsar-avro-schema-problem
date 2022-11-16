@@ -14,7 +14,9 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
     <jar.name>${project.name}</jar.name>
+    <jar.mainClass></jar.mainClass>
 
+    <netty.version>4.1.72.Final</netty.version>
     <pulsar.version>2.9.1</pulsar.version>
     <lombok.version>1.18.24</lombok.version>
     <slf4j.version>1.7.36</slf4j.version>
@@ -22,6 +24,12 @@
   </properties>
 
   <dependencies>
+    <dependency>
+      <groupId>io.netty</groupId>
+      <artifactId>netty-resolver</artifactId>
+      <version>${netty.version}</version>
+    </dependency>
+
     <dependency>
       <groupId>org.apache.pulsar</groupId>
       <artifactId>pulsar-functions-api</artifactId>
@@ -64,14 +72,6 @@
 
   <build>
     <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.10.0</version>
-        <configuration>
-          <release>${java.version}</release>
-        </configuration>
-      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-assembly-plugin</artifactId>
